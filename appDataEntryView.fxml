@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxWidth="-Infinity" prefHeight="450.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppDataEntryController">
+   <children>
+      <VBox layoutX="7.0" prefHeight="450.0" prefWidth="250.0">
+         <children>
+            <Label text="Enter appointment data">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="idTextField" disable="true" promptText="ID">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="titleTextField" promptText="Title">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="descTextField" promptText="Description">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="locTextField" promptText="Location">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <ComboBox fx:id="contactCB" prefWidth="225.0" promptText="Select contact">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="typeCB" prefWidth="225.0" promptText="Select type">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <HBox prefHeight="30.0" prefWidth="250.0">
+               <children>
+                  <DatePicker fx:id="startDatePicker" promptText="Select date">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <ComboBox fx:id="startCB" onAction="#onActionGetEndTimes" prefWidth="150.0" promptText="Start time">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="12.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <ComboBox fx:id="durationCB" prefWidth="225.0" promptText="Choose end time">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="5.0" right="12.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="customerCB" prefWidth="225.0" promptText="Select customer ID">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="userCB" prefWidth="225.0" promptText="Select user ID">
+               <VBox.margin>
+                  <Insets left="5.0" right="12.0" top="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <HBox prefHeight="50.0" prefWidth="250.0">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionSave" prefWidth="55.0" text="Save">
+                     <HBox.margin>
+                        <Insets left="52.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionCancel" prefWidth="55.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
